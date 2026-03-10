@@ -1,18 +1,32 @@
-# React UI Components – Efe
+# Minimal React UI Components
 
-A tiny collection of React components (Button, Card) that match how I like to build clean, minimal UIs.
+A tiny, production-friendly set of React UI primitives (Button, Card) that I use as a base in side projects and client work.
 
-These are intentionally small and focused; they are here so you can quickly see my React/TypeScript API design and styling approach.
+The goal of this repo is to show how I structure small, reusable components with a clean API, TypeScript types and sensible styling defaults.
 
 ## Components
 
-- `Button` – primary/ghost variants with sensible defaults
-- `Card` – simple content card with optional eyebrow
+### `Button`
+
+- Variants: `primary`, `ghost`
+- Accessible focus styles (`focus-visible`)
+- Disabled state handling
+
+### `Card`
+
+- Title + optional eyebrow label
+- Body content slot for arbitrary React children
+
+## Installation
+
+```bash
+npm install minimal-react-ui-components
+```
 
 ## Usage
 
 ```tsx
-import { Button, Card } from 'react-ui-components-efe';
+import { Button, Card } from 'minimal-react-ui-components';
 
 export function Example() {
   return (
@@ -23,3 +37,7 @@ export function Example() {
   );
 }
 ```
+
+## Notes
+
+This is intentionally small, but written the same way I would structure components in a larger design system.
